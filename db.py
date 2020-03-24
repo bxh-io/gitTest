@@ -8,8 +8,8 @@ import json_util
 
 
 def get_connection_string():
-    if 'DB_HOSTNAME' in os.environ:
-        if 'DB_PASSWORD' in os.environ:
+    if 'HOST_NAME' in os.environ:
+        if 'PASSWORD' in os.environ:
             return 'postgresql://{}:{}@{}/{}'.format(
                 os.environ.get('DB_USERNAME'),
                 os.environ.get('DB_PASSWORD'),
